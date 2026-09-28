@@ -1,0 +1,502 @@
+{
+  "generated_utc": "2026-09-18T17:54:53+00:00",
+  "examples": [
+    {
+      "id": "s1_equatorial_ohrc",
+      "title": "Equatorial OHRC cross-date",
+      "provenance": "REAL",
+      "challenge": "3-year revisit at different sun elevation",
+      "notes": "Two genuine OHRC observations of the same equatorial mare, 2021-04-02 and 2024-03-30. The PDS4 corner geometry places them about 2 km apart along track, so the pipeline correlates first to find the true overlap, then matches at native 0.3 m/px resolution.",
+      "sensor_a": "OHRC",
+      "sensor_b": "OHRC",
+      "gsd_m": 0.314,
+      "tile_px": [
+        1024,
+        1024
+      ],
+      "detector": "DISK",
+      "matcher": "LightGlue",
+      "metrics": {
+        "num_keypoints_a": 2048,
+        "num_keypoints_b": 2048,
+        "num_matches": 1094,
+        "num_inliers": 1051,
+        "inlier_ratio": 0.9607,
+        "rmse_px": 1.2425,
+        "median_error_px": 0.9835,
+        "p90_error_px": 1.9702,
+        "rmse_m": 0.3901,
+        "degenerate": false,
+        "warning": "",
+        "elapsed_ms": 2351.0
+      },
+      "ground_truth_error": null,
+      "homography": [
+        [
+          0.9905473667708303,
+          0.017490006906826838,
+          -5.391669895786278
+        ],
+        [
+          -0.13020767287972732,
+          1.0291631358466162,
+          33.048837952119385
+        ],
+        [
+          -3.0918660265626825e-06,
+          3.89776957844819e-06,
+          1.0
+        ]
+      ],
+      "homography_decomposed": {
+        "translation_x": -5.391669895786278,
+        "translation_y": 33.048837952119385,
+        "scale_x": 0.9990686282199936,
+        "scale_y": 1.0293117411781727,
+        "scale_mean": 1.0141901846990833,
+        "rotation_deg": -7.4886077083350635,
+        "shear_deg": -6.514994207351062,
+        "perspective_x": -3.0918660265626825e-06,
+        "perspective_y": 3.89776957844819e-06
+      },
+      "coreg": {
+        "window_a": {
+          "sample0": 8591,
+          "line0": 69363,
+          "sample1": 9615,
+          "line1": 70387,
+          "width": 1024,
+          "height": 1024
+        },
+        "window_b": {
+          "sample0": 209,
+          "line0": 504,
+          "sample1": 1255,
+          "line1": 1550,
+          "width": 1046,
+          "height": 1046
+        },
+        "ncc_peak": 0.2249,
+        "peak_ratio": 2.252,
+        "peak_z": 11.45,
+        "shift_samples": -476.0,
+        "shift_lines": 4942.0,
+        "shift_m_across": 149.6,
+        "shift_m_along": 1552.9,
+        "gsd_ratio": 0.9781,
+        "accepted": true,
+        "used_prior": false,
+        "reason": ""
+      },
+      "figures": {
+        "pair": "examples/s1_equatorial_ohrc/pair.png",
+        "keypoints": "examples/s1_equatorial_ohrc/keypoints.png",
+        "matches": "examples/s1_equatorial_ohrc/matches.png",
+        "overlay": "examples/s1_equatorial_ohrc/overlay.png",
+        "checkerboard": "examples/s1_equatorial_ohrc/checkerboard.png",
+        "residuals": "examples/s1_equatorial_ohrc/residuals.png"
+      }
+    },
+    {
+      "id": "s2_tmc_stereo",
+      "title": "TMC-2 stereo fore/nadir",
+      "provenance": "REAL",
+      "challenge": "stereo parallax under identical illumination",
+      "notes": "Fore and nadir views from a single TMC-2 orbit, acquired seconds apart. Illumination is identical, so any disparity is pure viewing geometry. This isolates the geometric half of the problem from the lighting half. These are 16-bit products; reading them as 8-bit, as the earlier pipeline did, returns noise.",
+      "sensor_a": "TMC-2",
+      "sensor_b": "TMC-2",
+      "gsd_m": 4.823,
+      "tile_px": [
+        1024,
+        1024
+      ],
+      "detector": "DISK",
+      "matcher": "LightGlue",
+      "metrics": {
+        "num_keypoints_a": 2048,
+        "num_keypoints_b": 2048,
+        "num_matches": 523,
+        "num_inliers": 501,
+        "inlier_ratio": 0.9579,
+        "rmse_px": 0.9566,
+        "median_error_px": 0.699,
+        "p90_error_px": 1.5121,
+        "rmse_m": 4.6135,
+        "degenerate": false,
+        "warning": "",
+        "elapsed_ms": 1674.7
+      },
+      "ground_truth_error": null,
+      "homography": [
+        [
+          1.0588183303157337,
+          -0.0005290126202759255,
+          7.243391605805019
+        ],
+        [
+          0.00027555356249227194,
+          0.9467936086542602,
+          -284.08830499661553
+        ],
+        [
+          7.911545324464132e-07,
+          -1.847023337787987e-06,
+          1.0
+        ]
+      ],
+      "homography_decomposed": {
+        "translation_x": 7.243391605805019,
+        "translation_y": -284.08830499661553,
+        "scale_x": 1.058818366171632,
+        "scale_y": 0.9467937564448283,
+        "scale_mean": 1.0028060613082301,
+        "rotation_deg": 0.014911014809747172,
+        "shear_deg": -0.01710249586429785,
+        "perspective_x": 7.911545324464132e-07,
+        "perspective_y": -1.847023337787987e-06
+      },
+      "coreg": {
+        "window_a": {
+          "sample0": 1344,
+          "line0": 118723,
+          "sample1": 2368,
+          "line1": 119747,
+          "width": 1024,
+          "height": 1024
+        },
+        "window_b": {
+          "sample0": 1271,
+          "line0": 110592,
+          "sample1": 2347,
+          "line1": 111668,
+          "width": 1076,
+          "height": 1076
+        },
+        "ncc_peak": 0.4199,
+        "peak_ratio": 1.283,
+        "peak_z": 2.98,
+        "shift_samples": 0.0,
+        "shift_lines": 0.0,
+        "shift_m_across": 0.0,
+        "shift_m_along": 0.0,
+        "gsd_ratio": 0.9523,
+        "accepted": true,
+        "used_prior": true,
+        "reason": "correlation inconclusive (peak=0.420, ratio=1.28, prominence=3.0 sigma) but the implied correction is only 1466 m, within the label accuracy we already assume; using the PDS4 geometry as-is"
+      },
+      "figures": {
+        "pair": "examples/s2_tmc_stereo/pair.png",
+        "keypoints": "examples/s2_tmc_stereo/keypoints.png",
+        "matches": "examples/s2_tmc_stereo/matches.png",
+        "overlay": "examples/s2_tmc_stereo/overlay.png",
+        "checkerboard": "examples/s2_tmc_stereo/checkerboard.png",
+        "residuals": "examples/s2_tmc_stereo/residuals.png"
+      }
+    },
+    {
+      "id": "s3_cross_sensor",
+      "title": "Cross-sensor OHRC to TMC-2",
+      "provenance": "DERIVED",
+      "challenge": "14x ground-scale gap between sensors",
+      "notes": "Your OHRC and TMC-2 strips are 42 degrees of longitude apart and never see the same ground, so no real cross-sensor pair exists in this dataset. Image B is the OHRC tile put through a TMC-2 sensor model: optical PSF, 17x resampling to 4.46 m/px, then detector noise. Because we chose the displacement, registration error can be measured against ground truth.",
+      "sensor_a": "OHRC",
+      "sensor_b": "TMC-2 (simulated)",
+      "gsd_m": 1.257,
+      "tile_px": [
+        1024,
+        1024
+      ],
+      "detector": "DISK",
+      "matcher": "LightGlue",
+      "metrics": {
+        "num_keypoints_a": 2048,
+        "num_keypoints_b": 2048,
+        "num_matches": 937,
+        "num_inliers": 856,
+        "inlier_ratio": 0.9136,
+        "rmse_px": 1.2934,
+        "median_error_px": 1.0486,
+        "p90_error_px": 1.9987,
+        "rmse_m": 1.6258,
+        "degenerate": false,
+        "warning": "",
+        "elapsed_ms": 2513.7
+      },
+      "ground_truth_error": {
+        "mean_corner_error_px": 0.3439973294734955,
+        "max_corner_error_px": 0.5531234741210938,
+        "per_corner_px": [
+          0.14840301871299744,
+          0.3232351243495941,
+          0.35122770071029663,
+          0.5531234741210938
+        ]
+      },
+      "homography": [
+        [
+          1.0288490710810703,
+          -0.04363309470908662,
+          12.662365693698398
+        ],
+        [
+          0.043166455351876805,
+          1.0286885024818746,
+          -40.87745068702997
+        ],
+        [
+          2.4032931389970716e-05,
+          9.13633110835087e-06,
+          1.0
+        ]
+      ],
+      "homography_decomposed": {
+        "translation_x": 12.662365693698398,
+        "translation_y": -40.87745068702997,
+        "scale_x": 1.029754220157425,
+        "scale_y": 1.029613462466519,
+        "scale_mean": 1.029683841311972,
+        "rotation_deg": 2.4024962215958614,
+        "shear_deg": -0.02631921478756548,
+        "perspective_x": 2.4032931389970716e-05,
+        "perspective_y": 9.13633110835087e-06
+      },
+      "coreg": null,
+      "figures": {
+        "pair": "examples/s3_cross_sensor/pair.png",
+        "keypoints": "examples/s3_cross_sensor/keypoints.png",
+        "matches": "examples/s3_cross_sensor/matches.png",
+        "overlay": "examples/s3_cross_sensor/overlay.png",
+        "checkerboard": "examples/s3_cross_sensor/checkerboard.png",
+        "residuals": "examples/s3_cross_sensor/residuals.png"
+      }
+    },
+    {
+      "id": "s4_polar_illumination",
+      "title": "Grazing illumination change",
+      "provenance": "SIMULATED",
+      "challenge": "sun elevation 15.0 vs 22.0 deg, azimuth opposed by 90 deg",
+      "notes": "Real lunar pixels relit by a Lambertian model on a relief field estimated from the tile, with cast shadows ray-marched along the solar azimuth. The two azimuths are near-opposed, so shadows fall on opposite sides of every crater. This is the hardest case for intensity-based matching and the reason the pipeline normalises illumination first.",
+      "sensor_a": "OHRC (relit)",
+      "sensor_b": "OHRC (relit)",
+      "gsd_m": 0.266,
+      "tile_px": [
+        1024,
+        1024
+      ],
+      "detector": "DISK",
+      "matcher": "LightGlue",
+      "metrics": {
+        "num_keypoints_a": 2048,
+        "num_keypoints_b": 2048,
+        "num_matches": 685,
+        "num_inliers": 312,
+        "inlier_ratio": 0.4555,
+        "rmse_px": 1.7709,
+        "median_error_px": 1.6149,
+        "p90_error_px": 2.6331,
+        "rmse_m": 0.4711,
+        "degenerate": false,
+        "warning": "",
+        "elapsed_ms": 2601.8
+      },
+      "ground_truth_error": {
+        "mean_corner_error_px": 4.747922897338867,
+        "max_corner_error_px": 5.9317755699157715,
+        "per_corner_px": [
+          3.9964897632598877,
+          4.759202003479004,
+          5.9317755699157715,
+          4.304224014282227
+        ]
+      },
+      "homography": [
+        [
+          1.016682966208919,
+          -0.02879755138779714,
+          -7.368128776077782
+        ],
+        [
+          0.033314688629567726,
+          1.01955483520784,
+          -11.456574202183427
+        ],
+        [
+          3.623567807266602e-06,
+          5.677978332060655e-06,
+          1.0
+        ]
+      ],
+      "homography_decomposed": {
+        "translation_x": -7.368128776077782,
+        "translation_y": -11.456574202183427,
+        "scale_x": 1.0172286479734294,
+        "scale_y": 1.0199614507233197,
+        "scale_mean": 1.0185950493483746,
+        "rotation_deg": 1.876797756712954,
+        "shear_deg": 0.25889597475908294,
+        "perspective_x": 3.623567807266602e-06,
+        "perspective_y": 5.677978332060655e-06
+      },
+      "coreg": null,
+      "figures": {
+        "pair": "examples/s4_polar_illumination/pair.png",
+        "keypoints": "examples/s4_polar_illumination/keypoints.png",
+        "matches": "examples/s4_polar_illumination/matches.png",
+        "overlay": "examples/s4_polar_illumination/overlay.png",
+        "checkerboard": "examples/s4_polar_illumination/checkerboard.png",
+        "residuals": "examples/s4_polar_illumination/residuals.png"
+      }
+    },
+    {
+      "id": "s5_iirs_multimodal",
+      "title": "IIRS hyperspectral NIR vs SWIR",
+      "provenance": "DERIVED",
+      "challenge": "multi-modal: different wavelengths respond to different physics",
+      "notes": "Both images are real IIRS radiance from the same 256-band cube, averaged over two band groups so signal-to-noise stays usable. The SWIR group spans the 3 micron hydration absorption; registering it against the NIR group is what lets a mineral map be laid over a morphology map. The IIRS strip does not overlap any OHRC strip in this dataset, so band-to-band is the genuine multi-modal problem here.",
+      "sensor_a": "IIRS NIR (bands 30-60)",
+      "sensor_b": "IIRS SWIR (bands 110-140)",
+      "gsd_m": 78.32,
+      "tile_px": [
+        248,
+        744
+      ],
+      "detector": "DISK",
+      "matcher": "LightGlue",
+      "metrics": {
+        "num_keypoints_a": 2045,
+        "num_keypoints_b": 2047,
+        "num_matches": 1311,
+        "num_inliers": 1246,
+        "inlier_ratio": 0.9504,
+        "rmse_px": 1.3687,
+        "median_error_px": 1.0591,
+        "p90_error_px": 2.2215,
+        "rmse_m": 107.1991,
+        "degenerate": false,
+        "warning": "",
+        "elapsed_ms": 2056.8
+      },
+      "ground_truth_error": {
+        "mean_corner_error_px": 0.8814734220504761,
+        "max_corner_error_px": 1.145128607749939,
+        "per_corner_px": [
+          0.6522027254104614,
+          1.145128607749939,
+          0.9229035377502441,
+          0.8056586980819702
+        ]
+      },
+      "homography": [
+        [
+          0.9885593260193084,
+          0.02584365464683047,
+          2.219356186045355
+        ],
+        [
+          -0.025001500251445246,
+          0.9895616852813833,
+          0.5567355275919571
+        ],
+        [
+          6.150639081275996e-06,
+          7.740161870196928e-07,
+          1.0
+        ]
+      ],
+      "homography_decomposed": {
+        "translation_x": 2.219356186045355,
+        "translation_y": 0.5567355275919571,
+        "scale_x": 0.9888754300085387,
+        "scale_y": 0.98989909761674,
+        "scale_mean": 0.9893872638126393,
+        "rotation_deg": -1.4487498197926518,
+        "shear_deg": 0.04726184790460253,
+        "perspective_x": 6.150639081275996e-06,
+        "perspective_y": 7.740161870196928e-07
+      },
+      "coreg": null,
+      "figures": {
+        "pair": "examples/s5_iirs_multimodal/pair.png",
+        "keypoints": "examples/s5_iirs_multimodal/keypoints.png",
+        "matches": "examples/s5_iirs_multimodal/matches.png",
+        "overlay": "examples/s5_iirs_multimodal/overlay.png",
+        "checkerboard": "examples/s5_iirs_multimodal/checkerboard.png",
+        "residuals": "examples/s5_iirs_multimodal/residuals.png"
+      }
+    }
+  ],
+  "detector_comparison": [
+    {
+      "scenario": "s3_cross_sensor",
+      "scenario_title": "Cross-sensor OHRC to TMC-2",
+      "detector": "DISK + LightGlue",
+      "requested": "DISK + LightGlue",
+      "num_matches": 937,
+      "num_inliers": 856,
+      "inlier_ratio": 0.9136,
+      "rmse_px": 1.2934,
+      "true_error_px": 0.344,
+      "degenerate": false
+    },
+    {
+      "scenario": "s3_cross_sensor",
+      "scenario_title": "Cross-sensor OHRC to TMC-2",
+      "detector": "SIFT + FLANN",
+      "requested": "SIFT + FLANN",
+      "num_matches": 233,
+      "num_inliers": 199,
+      "inlier_ratio": 0.8541,
+      "rmse_px": 0.4419,
+      "true_error_px": 0.312,
+      "degenerate": false
+    },
+    {
+      "scenario": "s4_polar_illumination",
+      "scenario_title": "Grazing illumination change",
+      "detector": "DISK + LightGlue",
+      "requested": "DISK + LightGlue",
+      "num_matches": 685,
+      "num_inliers": 312,
+      "inlier_ratio": 0.4555,
+      "rmse_px": 1.7709,
+      "true_error_px": 4.748,
+      "degenerate": false
+    },
+    {
+      "scenario": "s4_polar_illumination",
+      "scenario_title": "Grazing illumination change",
+      "detector": "SIFT + FLANN",
+      "requested": "SIFT + FLANN",
+      "num_matches": 15,
+      "num_inliers": 5,
+      "inlier_ratio": 0.3333,
+      "rmse_px": 0.0001,
+      "true_error_px": 1194.163,
+      "degenerate": false
+    },
+    {
+      "scenario": "s5_iirs_multimodal",
+      "scenario_title": "IIRS hyperspectral NIR vs SWIR",
+      "detector": "DISK + LightGlue",
+      "requested": "DISK + LightGlue",
+      "num_matches": 1311,
+      "num_inliers": 1246,
+      "inlier_ratio": 0.9504,
+      "rmse_px": 1.3687,
+      "true_error_px": 0.881,
+      "degenerate": false
+    },
+    {
+      "scenario": "s5_iirs_multimodal",
+      "scenario_title": "IIRS hyperspectral NIR vs SWIR",
+      "detector": "SIFT + FLANN",
+      "requested": "SIFT + FLANN",
+      "num_matches": 45,
+      "num_inliers": 20,
+      "inlier_ratio": 0.4444,
+      "rmse_px": 0.721,
+      "true_error_px": 1.565,
+      "degenerate": false
+    }
+  ]
+}

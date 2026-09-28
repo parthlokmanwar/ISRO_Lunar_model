@@ -1,0 +1,77 @@
+{
+  "id": "s5_iirs_multimodal",
+  "title": "IIRS hyperspectral NIR vs SWIR",
+  "provenance": "DERIVED",
+  "challenge": "multi-modal: different wavelengths respond to different physics",
+  "notes": "Both images are real IIRS radiance from the same 256-band cube, averaged over two band groups so signal-to-noise stays usable. The SWIR group spans the 3 micron hydration absorption; registering it against the NIR group is what lets a mineral map be laid over a morphology map. The IIRS strip does not overlap any OHRC strip in this dataset, so band-to-band is the genuine multi-modal problem here.",
+  "sensor_a": "IIRS NIR (bands 30-60)",
+  "sensor_b": "IIRS SWIR (bands 110-140)",
+  "gsd_m": 78.32,
+  "tile_px": [
+    248,
+    744
+  ],
+  "detector": "DISK",
+  "matcher": "LightGlue",
+  "metrics": {
+    "num_keypoints_a": 2045,
+    "num_keypoints_b": 2047,
+    "num_matches": 1311,
+    "num_inliers": 1246,
+    "inlier_ratio": 0.9504,
+    "rmse_px": 1.3687,
+    "median_error_px": 1.0591,
+    "p90_error_px": 2.2215,
+    "rmse_m": 107.1991,
+    "degenerate": false,
+    "warning": "",
+    "elapsed_ms": 2056.8
+  },
+  "ground_truth_error": {
+    "mean_corner_error_px": 0.8814734220504761,
+    "max_corner_error_px": 1.145128607749939,
+    "per_corner_px": [
+      0.6522027254104614,
+      1.145128607749939,
+      0.9229035377502441,
+      0.8056586980819702
+    ]
+  },
+  "homography": [
+    [
+      0.9885593260193084,
+      0.02584365464683047,
+      2.219356186045355
+    ],
+    [
+      -0.025001500251445246,
+      0.9895616852813833,
+      0.5567355275919571
+    ],
+    [
+      6.150639081275996e-06,
+      7.740161870196928e-07,
+      1.0
+    ]
+  ],
+  "homography_decomposed": {
+    "translation_x": 2.219356186045355,
+    "translation_y": 0.5567355275919571,
+    "scale_x": 0.9888754300085387,
+    "scale_y": 0.98989909761674,
+    "scale_mean": 0.9893872638126393,
+    "rotation_deg": -1.4487498197926518,
+    "shear_deg": 0.04726184790460253,
+    "perspective_x": 6.150639081275996e-06,
+    "perspective_y": 7.740161870196928e-07
+  },
+  "coreg": null,
+  "figures": {
+    "pair": "examples/s5_iirs_multimodal/pair.png",
+    "keypoints": "examples/s5_iirs_multimodal/keypoints.png",
+    "matches": "examples/s5_iirs_multimodal/matches.png",
+    "overlay": "examples/s5_iirs_multimodal/overlay.png",
+    "checkerboard": "examples/s5_iirs_multimodal/checkerboard.png",
+    "residuals": "examples/s5_iirs_multimodal/residuals.png"
+  }
+}

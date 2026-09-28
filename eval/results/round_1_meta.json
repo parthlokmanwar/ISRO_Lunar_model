@@ -1,0 +1,59 @@
+{
+  "round": 1,
+  "config": "default",
+  "pipeline": {
+    "clahe_clip": 3.0,
+    "suppress_shadows": true,
+    "max_keypoints": 2048,
+    "conf_threshold": 0.1,
+    "ransac_method": "MAGSAC",
+    "ransac_threshold": 3.0,
+    "preprocess": "clahe"
+  },
+  "arms": [
+    "M1_disk_lightglue",
+    "M2_sift_flann"
+  ],
+  "git_commit": "3b834c0",
+  "machine": {
+    "cpu": "Intel64 Family 6 Model 183 Stepping 1, GenuineIntel",
+    "logical_cpus": 28,
+    "torch_threads": 20,
+    "cuda": false,
+    "python": "3.14.3",
+    "torch": "2.11.0+cpu",
+    "kornia": "0.8.3",
+    "opencv": "5.0.0",
+    "numpy": "2.4.3"
+  },
+  "started_utc": "2026-09-18T17:33:32Z",
+  "terrain_tertiles": {
+    "F5_iirs_bands": [
+      10.710333333333333,
+      11.889666666666667
+    ],
+    "F3_scale_footprint": [
+      11.827,
+      16.180999999999997
+    ],
+    "F1_real_ohrc": [
+      11.387666666666666,
+      12.414666666666667
+    ],
+    "F6_viewpoint": [
+      8.779,
+      9.809
+    ],
+    "F2_real_tmc": [
+      6.466666666666667,
+      9.345333333333334
+    ],
+    "F4_illum_azimuth": [
+      12.014,
+      17.157
+    ]
+  },
+  "n_instances": 211,
+  "finished_utc": "2026-09-18T17:40:49Z",
+  "wall_s": 437.3
+}

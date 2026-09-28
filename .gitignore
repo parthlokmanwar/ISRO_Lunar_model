@@ -1,0 +1,53 @@
+# Secrets — rotate the keys currently in backend/.env before publishing anywhere
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.torch_cache/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Generated data products
+data/scenarios.json
+backend/static/scenes/
+backend/static/results/
+backend/static/proc_*.png
+backend/static/overlay_*.png
+backend/static/warped_*.png
+backend/static/density_*.png
+
+# Raw PDS4 bundles are large; keep them out of version control
+ch2_*/
+*.zip
+*.img
+*.qub
+data/*
+!data/README.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Stale copy of scene tiles from an earlier build; nothing reads it. Live tiles are in backend/static/scenes.
+data/scenes/
+
+# Team PPT exports and evaluation tile cache (regenerable)
+*.pdf
+eval/cache/
+
+# Local project notes and submission artifacts
+/SESSIONHANDOFF*.md
+/antigravity_build_prompt.md
+
+# Local editor/agent config
+.claude/

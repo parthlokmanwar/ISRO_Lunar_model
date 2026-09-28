@@ -1,0 +1,39 @@
+{
+  "round": 4,
+  "config": "baseline",
+  "pipeline": {
+    "clahe_clip": 3.0,
+    "suppress_shadows": true,
+    "max_keypoints": 2048,
+    "conf_threshold": 0.1,
+    "ransac_method": "MAGSAC",
+    "ransac_threshold": 3.0,
+    "preprocess": "clahe"
+  },
+  "arms": [
+    "M1_disk_lightglue",
+    "M2_sift_flann"
+  ],
+  "git_commit": "unknown",
+  "machine": {
+    "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "logical_cpus": 8,
+    "torch_threads": 4,
+    "cuda": false,
+    "python": "3.12.14",
+    "torch": "2.14.0+cpu",
+    "kornia": "0.8.3",
+    "opencv": "5.0.0",
+    "numpy": "2.3.5"
+  },
+  "started_utc": "2026-09-28T08:34:13Z",
+  "terrain_tertiles": {
+    "F4_illum_azimuth": [
+      12.013333333333334,
+      17.157
+    ]
+  },
+  "n_instances": 35,
+  "finished_utc": "2026-09-28T08:43:49Z",
+  "wall_s": 575.4
+}

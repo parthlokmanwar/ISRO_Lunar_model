@@ -1,0 +1,21 @@
+# Pinned to a range rather than an exact version: the exact pins in the previous
+# file (numpy 1.26, opencv 4.9, kornia 0.7.2) do not resolve on Python 3.12+,
+# which is what this now runs on.
+
+# API
+fastapi>=0.111
+uvicorn[standard]>=0.29
+pydantic>=2.7
+python-dotenv>=1.0
+
+# Imaging and numerics
+numpy>=1.26
+opencv-python-headless>=4.9
+Pillow>=10.3
+
+# Feature detection and matching (DISK + LightGlue)
+torch>=2.3
+kornia>=0.7.2
+
+# Assistant (optional at runtime; the endpoints degrade gracefully without keys)
+httpx>=0.27

@@ -1,0 +1,96 @@
+{
+  "id": "s1_equatorial_ohrc",
+  "title": "Equatorial OHRC cross-date",
+  "provenance": "REAL",
+  "challenge": "3-year revisit at different sun elevation",
+  "notes": "Two genuine OHRC observations of the same equatorial mare, 2021-04-02 and 2024-03-30. The PDS4 corner geometry places them about 2 km apart along track, so the pipeline correlates first to find the true overlap, then matches at native 0.3 m/px resolution.",
+  "sensor_a": "OHRC",
+  "sensor_b": "OHRC",
+  "gsd_m": 0.314,
+  "tile_px": [
+    1024,
+    1024
+  ],
+  "detector": "DISK",
+  "matcher": "LightGlue",
+  "metrics": {
+    "num_keypoints_a": 2048,
+    "num_keypoints_b": 2048,
+    "num_matches": 1094,
+    "num_inliers": 1051,
+    "inlier_ratio": 0.9607,
+    "rmse_px": 1.2425,
+    "median_error_px": 0.9835,
+    "p90_error_px": 1.9702,
+    "rmse_m": 0.3901,
+    "degenerate": false,
+    "warning": "",
+    "elapsed_ms": 2351.0
+  },
+  "ground_truth_error": null,
+  "homography": [
+    [
+      0.9905473667708303,
+      0.017490006906826838,
+      -5.391669895786278
+    ],
+    [
+      -0.13020767287972732,
+      1.0291631358466162,
+      33.048837952119385
+    ],
+    [
+      -3.0918660265626825e-06,
+      3.89776957844819e-06,
+      1.0
+    ]
+  ],
+  "homography_decomposed": {
+    "translation_x": -5.391669895786278,
+    "translation_y": 33.048837952119385,
+    "scale_x": 0.9990686282199936,
+    "scale_y": 1.0293117411781727,
+    "scale_mean": 1.0141901846990833,
+    "rotation_deg": -7.4886077083350635,
+    "shear_deg": -6.514994207351062,
+    "perspective_x": -3.0918660265626825e-06,
+    "perspective_y": 3.89776957844819e-06
+  },
+  "coreg": {
+    "window_a": {
+      "sample0": 8591,
+      "line0": 69363,
+      "sample1": 9615,
+      "line1": 70387,
+      "width": 1024,
+      "height": 1024
+    },
+    "window_b": {
+      "sample0": 209,
+      "line0": 504,
+      "sample1": 1255,
+      "line1": 1550,
+      "width": 1046,
+      "height": 1046
+    },
+    "ncc_peak": 0.2249,
+    "peak_ratio": 2.252,
+    "peak_z": 11.45,
+    "shift_samples": -476.0,
+    "shift_lines": 4942.0,
+    "shift_m_across": 149.6,
+    "shift_m_along": 1552.9,
+    "gsd_ratio": 0.9781,
+    "accepted": true,
+    "used_prior": false,
+    "reason": ""
+  },
+  "figures": {
+    "pair": "examples/s1_equatorial_ohrc/pair.png",
+    "keypoints": "examples/s1_equatorial_ohrc/keypoints.png",
+    "matches": "examples/s1_equatorial_ohrc/matches.png",
+    "overlay": "examples/s1_equatorial_ohrc/overlay.png",
+    "checkerboard": "examples/s1_equatorial_ohrc/checkerboard.png",
+    "residuals": "examples/s1_equatorial_ohrc/residuals.png"
+  }
+}

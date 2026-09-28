@@ -1,0 +1,96 @@
+{
+  "id": "s2_tmc_stereo",
+  "title": "TMC-2 stereo fore/nadir",
+  "provenance": "REAL",
+  "challenge": "stereo parallax under identical illumination",
+  "notes": "Fore and nadir views from a single TMC-2 orbit, acquired seconds apart. Illumination is identical, so any disparity is pure viewing geometry. This isolates the geometric half of the problem from the lighting half. These are 16-bit products; reading them as 8-bit, as the earlier pipeline did, returns noise.",
+  "sensor_a": "TMC-2",
+  "sensor_b": "TMC-2",
+  "gsd_m": 4.823,
+  "tile_px": [
+    1024,
+    1024
+  ],
+  "detector": "DISK",
+  "matcher": "LightGlue",
+  "metrics": {
+    "num_keypoints_a": 2048,
+    "num_keypoints_b": 2048,
+    "num_matches": 523,
+    "num_inliers": 501,
+    "inlier_ratio": 0.9579,
+    "rmse_px": 0.9566,
+    "median_error_px": 0.699,
+    "p90_error_px": 1.5121,
+    "rmse_m": 4.6135,
+    "degenerate": false,
+    "warning": "",
+    "elapsed_ms": 1674.7
+  },
+  "ground_truth_error": null,
+  "homography": [
+    [
+      1.0588183303157337,
+      -0.0005290126202759255,
+      7.243391605805019
+    ],
+    [
+      0.00027555356249227194,
+      0.9467936086542602,
+      -284.08830499661553
+    ],
+    [
+      7.911545324464132e-07,
+      -1.847023337787987e-06,
+      1.0
+    ]
+  ],
+  "homography_decomposed": {
+    "translation_x": 7.243391605805019,
+    "translation_y": -284.08830499661553,
+    "scale_x": 1.058818366171632,
+    "scale_y": 0.9467937564448283,
+    "scale_mean": 1.0028060613082301,
+    "rotation_deg": 0.014911014809747172,
+    "shear_deg": -0.01710249586429785,
+    "perspective_x": 7.911545324464132e-07,
+    "perspective_y": -1.847023337787987e-06
+  },
+  "coreg": {
+    "window_a": {
+      "sample0": 1344,
+      "line0": 118723,
+      "sample1": 2368,
+      "line1": 119747,
+      "width": 1024,
+      "height": 1024
+    },
+    "window_b": {
+      "sample0": 1271,
+      "line0": 110592,
+      "sample1": 2347,
+      "line1": 111668,
+      "width": 1076,
+      "height": 1076
+    },
+    "ncc_peak": 0.4199,
+    "peak_ratio": 1.283,
+    "peak_z": 2.98,
+    "shift_samples": 0.0,
+    "shift_lines": 0.0,
+    "shift_m_across": 0.0,
+    "shift_m_along": 0.0,
+    "gsd_ratio": 0.9523,
+    "accepted": true,
+    "used_prior": true,
+    "reason": "correlation inconclusive (peak=0.420, ratio=1.28, prominence=3.0 sigma) but the implied correction is only 1466 m, within the label accuracy we already assume; using the PDS4 geometry as-is"
+  },
+  "figures": {
+    "pair": "examples/s2_tmc_stereo/pair.png",
+    "keypoints": "examples/s2_tmc_stereo/keypoints.png",
+    "matches": "examples/s2_tmc_stereo/matches.png",
+    "overlay": "examples/s2_tmc_stereo/overlay.png",
+    "checkerboard": "examples/s2_tmc_stereo/checkerboard.png",
+    "residuals": "examples/s2_tmc_stereo/residuals.png"
+  }
+}

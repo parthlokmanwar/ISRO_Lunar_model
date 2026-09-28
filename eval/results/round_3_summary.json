@@ -1,0 +1,99 @@
+{
+  "A_trust_gates_on_ground_truth": {
+    "rmse<1.5 only (what most pipelines report)": {
+      "results_with_a_model": 173,
+      "accepted": 152,
+      "accepted_but_wrong": 38,
+      "precision": 0.75,
+      "right_but_rejected": 16,
+      "wrong_total": 43
+    },
+    "inliers>=15": {
+      "results_with_a_model": 173,
+      "accepted": 133,
+      "accepted_but_wrong": 5,
+      "precision": 0.9624,
+      "right_but_rejected": 2,
+      "wrong_total": 43
+    },
+    "arms agree <=3 px": {
+      "results_with_a_model": 173,
+      "accepted": 108,
+      "accepted_but_wrong": 2,
+      "precision": 0.9815,
+      "right_but_rejected": 24,
+      "wrong_total": 43
+    },
+    "inliers>=15 AND agree": {
+      "results_with_a_model": 173,
+      "accepted": 106,
+      "accepted_but_wrong": 1,
+      "precision": 0.9906,
+      "right_but_rejected": 25,
+      "wrong_total": 43
+    }
+  },
+  "B_C_by_family_arm": {
+    "F1_real_ohrc | M1_disk_lightglue": {
+      "n": 14,
+      "coherence_median": 0.778,
+      "heldout_homography_median": 1.479,
+      "heldout_h_plus_poly_median": 1.389,
+      "heldout_drop_pct_median": 5.5,
+      "map_precision_median": 0.091,
+      "map_precision_lt1_frac": 1.0
+    },
+    "F1_real_ohrc | M2_sift_flann": {
+      "n": 14,
+      "coherence_median": 0.857,
+      "heldout_homography_median": 1.429,
+      "heldout_h_plus_poly_median": 1.312,
+      "heldout_drop_pct_median": 5.4,
+      "map_precision_median": 0.093,
+      "map_precision_lt1_frac": 1.0
+    },
+    "F2_real_tmc | M1_disk_lightglue": {
+      "n": 60,
+      "coherence_median": 0.607,
+      "heldout_homography_median": 1.398,
+      "heldout_h_plus_poly_median": 1.3,
+      "heldout_drop_pct_median": 2.6,
+      "map_precision_median": 0.146,
+      "map_precision_lt1_frac": 1.0
+    },
+    "F2_real_tmc | M2_sift_flann": {
+      "n": 60,
+      "coherence_median": 0.559,
+      "heldout_homography_median": 1.293,
+      "heldout_h_plus_poly_median": 1.228,
+      "heldout_drop_pct_median": 2.3,
+      "map_precision_median": 0.189,
+      "map_precision_lt1_frac": 0.983
+    },
+    "F6_viewpoint | M1_disk_lightglue": {
+      "n": 8,
+      "coherence_median": 0.023,
+      "heldout_homography_median": 0.691,
+      "heldout_h_plus_poly_median": 0.692,
+      "heldout_drop_pct_median": -0.2,
+      "map_precision_median": null,
+      "map_precision_lt1_frac": null
+    },
+    "F6_viewpoint | M2_sift_flann": {
+      "n": 8,
+      "coherence_median": 0.057,
+      "heldout_homography_median": 0.511,
+      "heldout_h_plus_poly_median": 0.512,
+      "heldout_drop_pct_median": -0.1,
+      "map_precision_median": null,
+      "map_precision_lt1_frac": null
+    }
+  },
+  "F2_real_tmc_marginal_vs_success": {
+    "marginal_n": 40,
+    "success_n": 80,
+    "coherence_marginal": 0.765,
+    "coherence_success": 0.363,
+    "heldout_drop_pct_marginal": 3.0
+  }
+}

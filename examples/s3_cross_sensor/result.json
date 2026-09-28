@@ -1,0 +1,77 @@
+{
+  "id": "s3_cross_sensor",
+  "title": "Cross-sensor OHRC to TMC-2",
+  "provenance": "DERIVED",
+  "challenge": "14x ground-scale gap between sensors",
+  "notes": "Your OHRC and TMC-2 strips are 42 degrees of longitude apart and never see the same ground, so no real cross-sensor pair exists in this dataset. Image B is the OHRC tile put through a TMC-2 sensor model: optical PSF, 17x resampling to 4.46 m/px, then detector noise. Because we chose the displacement, registration error can be measured against ground truth.",
+  "sensor_a": "OHRC",
+  "sensor_b": "TMC-2 (simulated)",
+  "gsd_m": 1.257,
+  "tile_px": [
+    1024,
+    1024
+  ],
+  "detector": "DISK",
+  "matcher": "LightGlue",
+  "metrics": {
+    "num_keypoints_a": 2048,
+    "num_keypoints_b": 2048,
+    "num_matches": 937,
+    "num_inliers": 856,
+    "inlier_ratio": 0.9136,
+    "rmse_px": 1.2934,
+    "median_error_px": 1.0486,
+    "p90_error_px": 1.9987,
+    "rmse_m": 1.6258,
+    "degenerate": false,
+    "warning": "",
+    "elapsed_ms": 2513.7
+  },
+  "ground_truth_error": {
+    "mean_corner_error_px": 0.3439973294734955,
+    "max_corner_error_px": 0.5531234741210938,
+    "per_corner_px": [
+      0.14840301871299744,
+      0.3232351243495941,
+      0.35122770071029663,
+      0.5531234741210938
+    ]
+  },
+  "homography": [
+    [
+      1.0288490710810703,
+      -0.04363309470908662,
+      12.662365693698398
+    ],
+    [
+      0.043166455351876805,
+      1.0286885024818746,
+      -40.87745068702997
+    ],
+    [
+      2.4032931389970716e-05,
+      9.13633110835087e-06,
+      1.0
+    ]
+  ],
+  "homography_decomposed": {
+    "translation_x": 12.662365693698398,
+    "translation_y": -40.87745068702997,
+    "scale_x": 1.029754220157425,
+    "scale_y": 1.029613462466519,
+    "scale_mean": 1.029683841311972,
+    "rotation_deg": 2.4024962215958614,
+    "shear_deg": -0.02631921478756548,
+    "perspective_x": 2.4032931389970716e-05,
+    "perspective_y": 9.13633110835087e-06
+  },
+  "coreg": null,
+  "figures": {
+    "pair": "examples/s3_cross_sensor/pair.png",
+    "keypoints": "examples/s3_cross_sensor/keypoints.png",
+    "matches": "examples/s3_cross_sensor/matches.png",
+    "overlay": "examples/s3_cross_sensor/overlay.png",
+    "checkerboard": "examples/s3_cross_sensor/checkerboard.png",
+    "residuals": "examples/s3_cross_sensor/residuals.png"
+  }
+}
